@@ -1,0 +1,106 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<ad unit-id="adunit-2025bf85ad60874c"></ad>
+<view class="top">
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="today" data-date="今日" class="{{options.type=='today' ? 'light' : 'date'}}">今日</view>
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="tomorrow" data-date="明日" class="{{options.type=='tomorrow' ? 'light' : 'date'}}">明日</view>
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="week" data-date="本周" class="{{options.type=='week' ? 'light' : 'date'}}">本周</view>
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="nextweek" data-date="下周" class="{{options.type=='nextweek' ? 'light' : 'date'}}">下周</view>
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="month" data-date="本月" class="{{options.type=='month' ? 'light' : 'date'}}">本月</view>
+  <view bindtap="cate" data-catid="{{options.catid}}" data-type="year" data-date="今年" class="{{options.type=='year' ? 'light' : 'date'}}">今年</view>
+</view>
+<!--今日运势和明日运势-->
+<view wx:if="{{options.type=='today'||options.type=='tomorrow'}}">
+  <navigator class="reload" style="display:{{style}};" url="/pages/laohuangli/pages/detail/detail?catid={{options.catid}}&type=today&date=今天" open-type="redirect">
+    <image src="/i/2.png" />
+    <text>哎哟～网络不好，点击重新加载...</text>
+  </navigator>
+  <view style="display:{{show}}">
+    <view class="name">{{options.catid}}</view>
+    <view wx:if="{{restation.datetime}}" class="datetime">有效期：{{restation.datetime}}</view>
+    <text class="num">综合指数：<text wx:if="{{restation.all}}">{{restation.all}}</text>
+    <text wx:else>50%</text></text>
+    <text class="num">爱情指数：<text wx:if="{{restation.love}}">{{restation.love}}</text>
+    <text wx:else>60%</text></text>
+    <text class="num">健康指数：<text wx:if="{{restation.health}}">{{restation.health}}</text>
+    <text wx:else>80%</text></text>
+    <text class="num">财运指数：<text wx:if="{{restation.money}}">{{restation.money}}</text>
+    <text wx:else>50%</text></text>
+    <text class="num">工作指数：<text wx:if="{{restation.work}}">{{restation.work}}</text>
+    <text wx:else>30%</text></text>
+    <text class="num">速配星座：<text wx:if="{{restation.QFriend}}">{{restation.QFriend}}</text>
+    <text wx:else>白羊座</text></text>
+    <text class="num">幸运数字：<text wx:if="{{restation.number}}">{{restation.number}}</text>
+    <text wx:else>6</text></text>
+    <text class="num">幸运色：<text wx:if="{{restation.color}}">{{restation.color}}</text>
+    <text wx:else>红色</text></text>
+    <view class="taitle">今日概述:</view>
+    <view wx:if="{{restation.summary}}" class="content">{{restation.summary}}</view>
+    <view wx:else class="content"> 今天多给一些机会爱人付出，让对方知道自己是被需要的。想要在工作上多一些的进步，就要不断学习提升自己，才会有更多晋升机会。另外处理人际关系要圆融，那些做事坏习惯要改一改。</view>
+  </view>
+</view>
+<!--本周运势和下周运势-->
+<view wx:if="{{options.type=='week'||options.type=='nextweek'}}">
+  <navigator class="reload" style="display:{{style}};" url="/pages/laohuangli/pages/detail/detail?catid={{options.catid}}&type=week&date=本周" open-type="redirect">
+    <image src="/i/2.png" />
+    <text>哎哟～网络不好，点击重新加载...</text>
+  </navigator>
+  <view style="display:{{show}}">
+    <view class="name">{{restation.name}}</view>
+    <view class="datetime">有效期：{{restation.date}}</view>
+    <view class="taitle">财运运势:</view>
+    <view class="content">{{restation.money}}</view>
+    <view class="taitle">工作运势:</view>
+    <view class="content">{{restation.work}}</view>
+    <view class="taitle">爱情运势:</view>
+    <view class="content">{{restation.love}}</view>
+    <view class="taitle" wx:if="{{restation.health}}">健康运势:</view>
+    <view class="content"> {{restation.health}}</view>
+  </view>
+</view>
+<!--本月运势-->
+<view wx:if="{{options.type=='month'}}">
+  <navigator class="reload" style="display:{{style}};" url="/pages/laohuangli/pages/detail/detail?catid={{options.catid}}&type=month&date=本月" open-type="redirect">
+    <image src="/i/2.png" />
+    <text>哎哟～网络不好，点击重新加载...</text>
+  </navigator>
+  <view style="display:{{show}}">
+    <view class="name">{{restation.name}}</view>
+    <view class="datetime">有效期：{{restation.date}}</view>
+    <view class="taitle">综合运势:</view>
+    <view class="content"> {{restation.all}}</view>
+    <view class="taitle">财运运势:</view>
+    <view class="content">{{restation.money}}</view>
+    <view class="taitle">工作运势:</view>
+    <view class="content">{{restation.work}}</view>
+    <view class="taitle">爱情运势:</view>
+    <view class="content">{{restation.love}}</view>
+    <view class="taitle">健康运势:</view>
+    <view class="content">{{restation.health}}</view>
+  </view>
+</view>
+<!--今年运势-->
+<view wx:if="{{options.type=='year'}}">
+  <navigator class="reload" style="display:{{style}};" url="/pages/laohuangli/pages/detail/detail?catid={{options.catid}}&type=year&date=今年" open-type="redirect">
+    <image src="/i/2.png" />
+    <text>哎哟～网络不好，点击重新加载...</text>
+  </navigator>
+  <view style="display:{{show}}">
+    <view class="name">{{restation.name}}</view>
+    <view class="datetime">有效期：{{restation.date}}</view>
+    <view class="taitle">爱情运势:</view>
+    <view class="content"> {{restation.love}}</view>
+    <view class="taitle">财运运势:</view>
+    <view class="content">{{restation.finance}}</view>
+    <view class="taitle">事业运势:</view>
+    <view class="content">{{restation.career}}</view>
+  </view>
+</view>
+<view class="bt">
+  <button  open-type="share" >😁点我分享</button>
+</view>
+
+<template is="miniProgram" />
+<ad class="ad" unit-id="adunit-2025bf85ad60874c"></ad>
+<template is="footer" />

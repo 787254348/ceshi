@@ -1,0 +1,153 @@
+{
+  "pages":[
+    "pages/tabBar/calendar/calendar",
+    "pages/tabBar/heka/heka",
+    "pages/tabBar/xingzuo/xingzuo",
+    "pages/tabBar/qingjian/qingjian",
+    "pages/tabBar/jiemeng/jiemeng"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00bab8",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  },
+ 
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#00bab8",
+    "borderStyle":"", 
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/tabBar/calendar/calendar",
+      "iconPath": "i/4.png",
+      "selectedIconPath": "i/3.png",
+      "text": "首页"
+    },{
+      "pagePath": "pages/tabBar/qingjian/qingjian",
+      "iconPath": "i/qingjian.png",
+      "selectedIconPath": "i/qingjian1.png",
+      "text": "请柬"
+    },{
+      "pagePath": "pages/tabBar/heka/heka",
+      "iconPath": "i/heka.png",
+      "selectedIconPath": "i/heka1.png",
+      "text": "贺卡"
+    },{
+      "pagePath": "pages/tabBar/xingzuo/xingzuo",
+      "iconPath": "i/5.png",
+      "selectedIconPath": "i/6.png",
+      "text": "查运势"
+    },{
+      "pagePath": "pages/tabBar/jiemeng/jiemeng",
+      "iconPath": "i/meng2.png",
+      "selectedIconPath": "i/meng.png",
+      "text": "解梦"
+    }]
+  },
+   "subPackages": [
+    {
+      "root": "pages/laohuangli/",
+      "pages": [
+        "pages/detail/detail",
+        "pages/huangli/huangli",
+        "pages/jiemengDetail/jiemengDetail",
+        "pages/xiaohua/xiaohua",
+        "pages/xhd/xhd",
+        "pages/lishiDetail/lishiDetail",
+        "pages/lishi/lishi"
+      ]
+    },
+   
+    {
+      "root": "pages/zidian/",
+      "pages": [
+        "pages/zidian/zidian",
+        "pages/chengyu/chengyu"
+      ]
+    },
+
+    {
+      "root": "pages/toutiao",
+      "pages": [
+        "pages/liebiao/liebiao",
+        "pages/xq/xq"
+      ]
+    },
+
+   {
+    "root": "pages/yule/",
+    "pages": [
+      "pages/cs/cs",
+      "pages/csxq/xq"
+    ]
+    },
+
+    {
+      "root": "pages/huoxing/",
+      "pages": [
+        "pages/hx/hx",
+        "pages/hxfx/hxfx",
+        "pages/ft/ft",
+        "pages/ftfx/ftfx"
+      ]
+    },
+    
+  
+    {
+      "root": "pages/heka/",
+      "pages": [
+        "pages/hekaxq/hekaxq",
+        "pages/hekaxqfx/hekaxqfx"
+      ]
+    },
+
+    {
+      "root": "pages/newheka/",
+      "pages": [
+        "pages/duanwu/duanwu",
+        "pages/qunyou/qunyou",
+        "pages/qunyou2/qunyou2",
+        "pages/shengri1/shengri1",
+        "pages/shengri2/shengri2",
+        "pages/wanan/wanan",
+        "pages/zaoan/zaoan",
+        "pages/zhoumo/zhoumo"
+      ]
+    },
+
+    {
+      "root": "pages/Nheka/",
+      "pages": [
+        "pages/jieri/jieri",
+        "pages/jierifx/jierifx"
+      ]
+    },
+
+    {
+      "root": "pages/jieqi/",
+      "pages": [
+        "pages/jq/jq",
+        "pages/jr/jr"
+      ]
+    },
+
+    {
+      "root": "pages/pay/",
+      "pages": [
+        "pages/pay/pay",
+        "pages/xieyi/xieyi"
+      ]
+    },
+
+    {
+      "root": "pages/qingjian/",
+      "pages": [
+        "pages/qj/qj",
+        "pages/qjxq/qjxq",
+        "pages/wode/wode"
+        
+      ]
+    }
+  ]
+}

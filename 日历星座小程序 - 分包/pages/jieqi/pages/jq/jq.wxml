@@ -1,0 +1,37 @@
+
+<import src="../../../templet.wxml" />
+
+<image class="img{{play}}"  src="/i/music.png" />
+<button type="primary" class="bofang" bindtap="{{yinyue ? 'audioPlay' : 'audioPause'}}">播放</button>
+<audio src="https://wap.goods100.com/heka/sound/jieri.mp3" id="myAudio" loop="true"></audio> 
+<view style="margin-top:-40rpx">
+    <text class="left"></text>
+    <text class="point">.</text>
+    <text class="center">中国传统二十四节气</text>
+    <text class="point">.</text>
+    <text class="right"></text>
+</view>
+<view  class="jieqi">[{{options.title}}]</view>
+<view class="date">{{options.date}}</view>
+<view  class="introduce">{{options.introduce}}</view>
+<view  class="content">{{options.content}}</view>
+<button style="background-color:#009933" class="onshare" open-type="share"  bindtap="onshare">😁分享给好友</button>
+<view class="ad" wx:if="{{vip==0&&options.v==0}}">
+    <ad style="margin-bottom:20rpx" unit-id="adunit-569b6b74feb40aa1"></ad>
+</view>
+
+<image class="img3" src="{{options.img}}"/>
+<form bindsubmit="save" report-submit>
+    <input type="hidden" name="openid" value="{{openid}}" style="display:none" />
+    <button class="save" formType="submit" ><image  src="/i/pyq.png" class="f-x" style="width:48rpx;height:48rpx"/>点击生成祝福图片</button>
+</form>
+<template is="footer" />
+<template is="msgItem" />
+<view wx:if="{{vip==0&&options.v==0}}">
+    <ad unit-id="adunit-569b6b74feb40aa1"></ad>
+</view>
+<!--隐藏canvas绘制的图片-->
+ <view style='width:0px;height:0px;overflow:hidden;'>
+    <canvas canvas-id="shareCanvas" style="width:360px;height:660px;" />
+</view>    
+    <!-- <canvas canvas-id="shareCanvas" style="width:360px;height:680px;" bindtap="previewImage"/>    -->

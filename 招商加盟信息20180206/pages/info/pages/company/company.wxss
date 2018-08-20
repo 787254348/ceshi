@@ -1,0 +1,162 @@
+/* pages/company/company.wxss */
+
+.banner {
+  overflow: hidden;
+  height: 150rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.swiper{
+  display: block;
+  height: 150rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.share {
+  background-color:#fff;
+  width:90%;
+  color:#009933;
+  border:1rpx solid #009933;
+}
+
+/*商品goods*/
+
+.goods {
+  overflow: hidden;
+}
+
+.goods-box {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  border-bottom: 6rpx solid #eee;
+}
+
+.goods-box .gds-img {
+  width: 200rpx;
+  height: 150rpx;
+  margin: 32rpx;
+}
+
+.goods-box .gds-title {
+  font-size: 28rpx;
+  height: 68rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width: 446rpx;
+  padding-right: 3em;
+  line-height: 28rpx;
+  font-weight: 900;
+  color: #099;
+  position: absolute;
+  top: 20rpx;
+  left: 280rpx;
+  padding-top: 2rpx;
+}
+
+.num {
+  width: 40rpx;
+  color: darkorange;
+}
+
+.money {
+  font-size: 28rpx;
+  margin-top: -76rpx;
+  margin-left: 280rpx;
+  border-top: 3rpx solid #ddd;
+  margin-bottom: 20rpx;
+  padding-top: 10rpx;
+  margin-right: 16px;
+}
+
+.address {
+  position: relative;
+  top: -102rpx;
+  left: 280rpx;
+  font-size: 24rpx;
+  color: #999;
+  height: 30rpx;
+  overflow:hidden;
+  width:63%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.reply {
+  background-color: #093;
+  color: #fff;
+  width: 373rpx;
+  margin-left: 173rpx;
+  box-shadow: 10rpx 10rpx 3rpx #ccc;
+  border-radius: 30rpx;
+  margin-top: 10rpx;
+}
+
+.title {
+  text-align: left;
+  border-bottom: 2px solid #eee;
+  color: #777;
+  font-size: 30rpx;
+  padding-bottom: 12rpx;
+  width: 100%;
+  display: inline-block;
+}
+
+.txt {
+  margin-left: 0.5em;
+  margin-right: 0.3em;
+  font-size: 50rpx;
+}
+
+.image {
+  position: fixed;
+  top: 224rpx;
+  right: 50rpx;
+  z-index: 4;
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+}
+
+.vip {
+  width: 98rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 280rpx;
+}
+
+.honor {
+  position: absolute;
+  top: 80rpx;
+  left: 396rpx;
+  color: #093;
+  border: 1rpx solid #093;
+  font-size: 22rpx;
+  height: 28rpx;
+  line-height: 30rpx;
+}
+
+.honor1 {
+  padding-left: 1rem;
+  font-size: 30rpx;
+  line-height: 66rpx;
+  color: #093;
+}
+
+.nav navigator{
+  width:calc(22.5% - 2px);
+  margin-left:2%;
+  height:60rpx;
+  line-height:60rpx;
+  margin-top:20rpx;
+}

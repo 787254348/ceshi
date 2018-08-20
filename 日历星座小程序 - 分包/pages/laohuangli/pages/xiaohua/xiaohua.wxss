@@ -1,0 +1,135 @@
+/* pages/xiaohua/xiaohua.wxss */
+
+.ad {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 68rpx;
+  color: #00bab8;
+}
+
+.right {
+  width: 50%;
+  text-align: center;
+  float: right;
+  line-height: 68rpx;
+  color: #00bab8;
+}
+
+.light_l {
+  float: left;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4rpx solid #00bab8;
+  color: #00bab8;
+  line-height: 68rpx;
+  font-weight: 600;
+}
+
+.light_r {
+  float: right;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4rpx solid #00bab8;
+  color: #00bab8;
+  line-height: 68rpx;
+  font-weight: 600;
+}
+
+.content {
+  margin-top: 20rpx;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.content1 {
+  margin-top: 20rpx;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.box {
+  /* padding-top: 72rpx; */
+}
+
+.b {
+  border-bottom: 5rpx solid #ccc;
+}
+
+.txt {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  color: #333;
+  font-size:38rpx;
+  line-height:60rpx;
+  font-family:微软雅黑;
+}
+
+.dy {
+  display: block;
+  float: right;
+  margin-top: 100rpx;
+  margin-right: -50rpx;
+  font-size: 72rpx;
+  font-weight: 600;
+  color: #00bab8;
+}
+
+.gds-img{
+  width:100%;
+}
+
+.time {
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  margin-bottom: 10rpx;
+  color: #999;
+}
+
+.more {
+  display: block;
+  margin: 50rpx auto;
+  font-size: 28rpx;
+  text-align: center;
+  color: #999;
+}
+
+.more .more-title {
+  display: block;
+}
+
+.share {
+  width: 50rpx;
+  height: 60rpx;
+  top: 600rpx;
+  line-height: 60rpx;
+  left: 46%;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 0;
+  position: fixed;
+  z-index: 4;
+}
+
+.sh {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+button::after {
+  border: 0;
+}
+
+.onshare {
+  width: 96%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 30rpx;
+}

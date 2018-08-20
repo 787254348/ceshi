@@ -1,0 +1,150 @@
+
+@import "../../../common/footer.wxss";
+page{
+  font-family: 微软雅黑;
+}
+.body {
+  margin-top: 60rpx;
+  color: #555;
+  font-size: 45rpx;
+}
+
+.content{
+  width:90%;
+  margin-left:5%;
+  font-size:36rpx;
+  color:#666;
+  line-height:54rpx;
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+  text-align:justify;
+}
+
+.time {
+  font-size: 24rpx;
+  margin-top: 18rpx;
+  color: #666;
+  margin-left: 6%;
+}
+
+.title {
+  margin-bottom:50rpx;
+  text-align:center;
+  width:90%;
+  margin-left:5%;
+}
+
+.icon{
+  padding-right:1em
+}
+
+.button {
+  width: 21%;
+  float: left;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.c {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.share {
+  width: 50rpx;
+  height: 60rpx;
+  top: 25%;
+  line-height: 60rpx;
+  left: 46%;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 0;
+  position: fixed;
+  z-index: 4;
+}
+
+.sh {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+button::after {
+  border: 0;
+}
+
+.zs {
+  margin-left: 4%;
+  margin-top: 20rpx;
+}
+
+img {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+
+.ben {
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #093;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+.fz {
+  padding-left: 4%;
+  margin-top: 30rpx;
+  border-top: 4rpx solid #ccc;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.fuli {
+  font-size: 48rpx;
+  font-family: 'songti', Helvetica, STHeiTi, sans-seri;
+  vertical-align: middle;
+  color: #fff;
+  font-weight: bold;
+}
+
+.view-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc;
+  margin-top: 20rpx;
+}
+
+.you {
+  float: right;
+  margin-right: 20rpx;
+}
+
+.bt{
+  display:flex;
+  width:100%;
+  flex:wrap;
+  margin-top:20rpx;
+}
+
+.bt button{
+  width:96%;
+  margin-left:2%;
+  background:#00bab8;
+  height:92rpx;
+  line-height:92rpx;
+  font-size:36rpx;
+  padding:0;
+  margin-right:0;
+  color:#fff;
+}

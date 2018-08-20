@@ -1,0 +1,111 @@
+.me .userinfo {
+  position: relative;
+  width: 750rpx;
+  height: 180rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-top: 20rpx solid #eee;
+}
+
+.userinfo-avatar {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  margin-left: 1rem;
+}
+
+.userinfo-nickname {
+  font-size: 28rpx;
+  margin-left: 240rpx;
+  margin-top: -150rpx;
+}
+
+.by {
+  margin-left: 240rpx;
+  color: #999;
+  font-size: 34rpx;
+  margin-top: 6rpx;
+}
+
+.view-name {
+  font-size: 28rpx;
+  font-family: 'songti', Helvetica, STHeiTi, sans-seri;
+}
+
+.point {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: red;
+  display: inline-block;
+  position: relative;
+  left: -430rpx;
+  top: -8px;
+}
+
+.success {
+  position: relative;
+  top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.upload {
+  margin-top: 14rpx;
+  margin-left: 90rpx;
+  color: #093;
+}
+
+.status {
+  margin-top: 14rpx;
+  margin-left: 80rpx;
+}
+
+.success_no_circle {
+  position: relative;
+  left: 80rpx;
+  top: 10rpx;
+}
+
+.right {
+  float: right;
+  font-size: 36rpx;
+  color: #999;
+}
+
+.c {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 24rpx;
+}
+
+.ben {
+  height: 45rpx;
+  width: 45rpx;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #093;
+  color: #fff;
+  text-align: center;
+  line-height: 45rpx;
+  font-weight: 900;
+  font-family: 微软雅黑;
+  font-size: 32rpx;
+  border-radius: 50%;
+}
+
+.shouquan {
+  padding-left: 34rpx;
+  text-align: center;
+  color: #093;
+  border: 1rpx solid #093;
+  background: #eee;
+}
+
+button:after {
+  border: none;
+}

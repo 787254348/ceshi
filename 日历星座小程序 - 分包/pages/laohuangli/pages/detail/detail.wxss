@@ -1,0 +1,118 @@
+/* pages/detail/detail.wxss */
+@import "../../../common/footer.wxss";
+.top {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.date {
+  float: left;
+  width: 10.66%;
+  padding: 20rpx;
+  margin-left: 5rpx;
+  color: #666;
+}
+
+.light {
+  float: left;
+  width: 10.66%;
+  padding: 20rpx;
+  margin-left: 5rpx;
+  background-color: #00bab8;
+  color: #fff;
+}
+
+.reload {
+  text-align: center;
+  padding-top: 50%;
+  color: blue;
+}
+
+.reload image {
+  width: 120rpx;
+  height: 120rpx;
+  display: block;
+  margin-left: 42%;
+}
+
+.reload text {
+  color: #ccc;
+  display: block;
+  margin-top: 26rpx;
+}
+
+.num {
+  display: inline-block;
+  width: 45%;
+  margin-left: 5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+
+.name {
+  text-align: center;
+  color: #00bab8;
+  padding-top: 120rpx;
+  padding-bottom: 10rpx;
+  font-weight: 800;
+}
+
+.datetime {
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+}
+
+.taitle {
+  margin-left: 5%;
+  margin-top: 50rpx;
+  color: #666;
+}
+
+.content {
+  color: #666;
+  padding-left: 5%;
+  padding-top: 10rpx;
+  padding-right: 5%;
+}
+
+.c {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.sh {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+button::after {
+  border: 0;
+}
+
+.ad{
+  margin-top:30rpx;
+}
+
+.bt{
+  display:flex;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.bt button{
+  background:#00bab8;
+  color:#fff;
+  width:96%;
+  margin-left:2%;
+  margin-right:0;
+  padding:0;
+  line-height:92rpx;
+  margin-top:20rpx;
+}
+
+

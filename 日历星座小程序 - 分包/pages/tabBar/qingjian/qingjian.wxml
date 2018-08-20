@@ -1,0 +1,218 @@
+<view class="header" style="margin-top:20rpx;padding-bottom:20rpx">
+  <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/calendar/calendar">
+    <button>首页</button>
+  </navigator>
+  <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/heka/heka">
+    <button>贺卡</button>
+  </navigator>
+  <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/xingzuo/xingzuo">
+    <button>运势</button>
+  </navigator>
+  <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/jiemeng/jiemeng">
+    <button>解梦</button>
+  </navigator>
+  <navigator class="template-1"  url="/pages/qingjian/pages/wode/wode">
+    <button style="background:red;">我的</button>
+  </navigator>
+</view>
+<view class="daohang">
+    <view class="{{select==1?'t1':'t'}}" bindtap="select" data-name="1">结婚</view>
+    <view class="{{select==2?'t1':'t'}}" bindtap="select" data-name="2">宝宝百日/满月</view>
+    <view class="{{select==3?'t1':'t'}}" bindtap="select" data-name="3">乔迁新房</view>
+    <view class="{{select==4?'t1':'t'}}" bindtap="select" data-name="4">聚餐/活动/商务</view>
+    <view class="{{select==5?'t1':'t'}}" bindtap="select" data-name="5">同学会/升学宴</view>
+    <view class="{{select==6?'t1':'t'}}" bindtap="select" data-name="6">生日宴</view>
+</view>
+<view wx:if="{{vip==0}}" class="ad">
+    <ad  unit-id="adunit-695d1582cc3beb91"></ad>
+</view>
+<!--结婚-->
+<view class="flex-container" wx:if="{{select==1}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=我们结婚啦&id=25&templet=jiehun4&cate_id=1">
+        <image class="img"  src="{{img[24]}}" binderror="binderrorimg" data-errorimg="24"/>  
+        <view class="title">我们结婚啦</view>
+    </navigator> 
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=我们结婚啦&id=26&templet=jiehun1&cate_id=1">
+        <image class="img"  src="{{img[25]}}" binderror="binderrorimg" data-errorimg="25"/>  
+        <view class="title">我们结婚啦</view>
+    </navigator> 
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=我们结婚啦&id=27&templet=jiehun4&cate_id=1">
+        <image class="img"  src="{{img[26]}}" binderror="binderrorimg" data-errorimg="26"/>  
+        <view class="title">我们结婚啦</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=我们结婚啦&id=1&templet=jiehun1&cate_id=1">
+        <image class="img"  src="{{img[0]}}" binderror="binderrorimg" data-errorimg="0"/>  
+        <view class="title">我们结婚啦</view>
+    </navigator>
+    <!-- <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=我们结婚了&id=2&templet=jiehun2&cate_id=1">
+        <image class="img"  src="{{img[1]}}" binderror="binderrorimg" data-errorimg="1"/>  
+        <view class="title">我们结婚了</view>
+    </navigator> -->
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=结婚光荣&id=3&templet=jiehun3&cate_id=1">
+        <image class="img"  src="{{img[2]}}" binderror="binderrorimg" data-errorimg="2"/>  
+        <view class="title">结婚光荣</view>
+    </navigator>
+</view>
+<!--满月/百日宴-->
+<view class="flex-container" wx:if="{{select==2}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝满月&id=37&templet=manyue3&cate_id=2">
+        <image class="img"  src="{{img[36]}}" binderror="binderrorimg" data-errorimg="36"/>  
+        <view class="title">宝宝满月</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝满月&id=38&templet=manyue3&cate_id=2">
+        <image class="img"  src="{{img[37]}}" binderror="binderrorimg" data-errorimg="37"/>  
+        <view class="title">宝宝满月</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝百日&id=39&templet=bairi4&cate_id=6">
+        <image class="img"  src="{{img[38]}}" binderror="binderrorimg" data-errorimg="38"/>  
+        <view class="title">宝宝百日</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝百日&id=40&templet=bairi1&cate_id=6">
+        <image class="img"  src="{{img[39]}}" binderror="binderrorimg" data-errorimg="39"/>  
+        <view class="title">宝宝百日</view>
+    </navigator>
+    <!-- <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝百日&id=19&templet=bairi1&cate_id=6">
+        <image class="img"  src="{{img[18]}}" binderror="binderrorimg" data-errorimg="18"/>  
+        <view class="title">宝宝百日</view>
+    </navigator> 
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=百日宴席&id=20&templet=bairi2&cate_id=6">
+        <image class="img"  src="{{img[19]}}" binderror="binderrorimg" data-errorimg="19"/>  
+        <view class="title">百日宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=百日酒席&id=21&templet=bairi3&cate_id=6">
+        <image class="img"  src="{{img[20]}}" binderror="binderrorimg" data-errorimg="20"/>  
+        <view class="title">百日酒席</view>
+    </navigator>
+   <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=宝宝庆灯宴席&id=4&templet=manyue1&cate_id=8">
+        <image class="img"  src="{{img[3]}}" binderror="binderrorimg" data-errorimg="3"/>  
+        <view class="title">宝宝庆灯宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=满月宴席&id=5&templet=manyue2&cate_id=2">
+        <image class="img"  src="{{img[4]}}" binderror="binderrorimg" data-errorimg="4"/>  
+        <view class="title">满月宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=满月赴宴&id=6&templet=manyue2&cate_id=2">
+        <image class="img"  src="{{img[5]}}" binderror="binderrorimg" data-errorimg="5"/>  
+        <view class="title">满月赴宴</view>
+    </navigator>  -->
+</view>
+<!--乔迁新房-->
+<view class="flex-container" wx:if="{{select==3}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=乔迁新居&id=28&templet=qiaoqian4&cate_id=3">
+        <image class="img"  src="{{img[27]}}" binderror="binderrorimg" data-errorimg="27"/>  
+        <view class="title">乔迁新居</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=乔迁新居&id=29&templet=qiaoqian4&cate_id=3">
+        <image class="img"  src="{{img[28]}}" binderror="binderrorimg" data-errorimg="28"/>  
+        <view class="title">乔迁新居</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=乔迁新居&id=30&templet=qiaoqian4&cate_id=3">
+        <image class="img"  src="{{img[29]}}" binderror="binderrorimg" data-errorimg="29"/>  
+        <view class="title">乔迁新居</view>
+    </navigator>
+   <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=乔迁新居&id=7&templet=qiaoqian1&cate_id=3">
+        <image class="img"  src="{{img[6]}}" binderror="binderrorimg" data-errorimg="6"/>  
+        <view class="title">乔迁新居</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=乔迁宴席&id=8&templet=qiaoqian2&cate_id=3">
+        <image class="img"  src="{{img[7]}}" binderror="binderrorimg" data-errorimg="7"/>  
+        <view class="title">乔迁宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=恭贺乔迁&id=9&templet=qiaoqian3&cate_id=3">
+        <image class="img"  src="{{img[8]}}" binderror="binderrorimg" data-errorimg="8"/>  
+        <view class="title">恭贺乔迁</view>
+    </navigator>
+</view>
+<!--商务|开业|其他-->
+<view class="flex-container" wx:if="{{select==4}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=开业邀请函&id=41&templet=kaiye1&cate_id=4&t=1">
+        <image class="img"  src="{{img[40]}}" binderror="binderrorimg" data-errorimg="40"/>  
+        <view class="title">开业邀请函</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=商务/活动&id=42&templet=shangwu1&cate_id=4&t=2">
+        <image class="img"  src="{{img[41]}}" binderror="binderrorimg" data-errorimg="41"/>  
+        <view class="title">商务/活动</view>
+    </navigator> 
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=聚餐/商务/活动&id=10&templet=tongxue1&cate_id=4&t=2">
+        <image class="img"  src="{{img[9]}}" binderror="binderrorimg" data-errorimg="9"/>  
+        <view class="title">聚餐/商务/活动</view>
+    </navigator> 
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=活动/聚餐/商务&id=11&templet=tongxue1&cate_id=4&t=2">
+        <image class="img"  src="{{img[10]}}" binderror="binderrorimg" data-errorimg="10"/>  
+        <view class="title">活动/聚餐/商务</view>
+    </navigator>
+    <!-- <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=同学会|商务&id=12&templet=tongxue1&cate_id=4">
+        <image class="img"  src="{{img[11]}}" binderror="binderrorimg" data-errorimg="11"/>  
+        <view class="title">同学会|商务</view>
+    </navigator> -->
+    <!-- <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=同学会|商务&id=13&templet=tongxue1&cate_id=4">
+        <image class="img"  src="{{img[12]}}" binderror="binderrorimg" data-errorimg="12"/>  
+        <view class="title">同学会|商务</view>
+    </navigator> -->
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=活动/聚餐/商务&id=14&templet=tongxue1&cate_id=4&t=2">
+        <image class="img"  src="{{img[13]}}" binderror="binderrorimg" data-errorimg="13"/>  
+        <view class="title">活动/聚餐/商务</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=活动/聚餐/商务&id=15&templet=tongxue2&cate_id=4&t=2">
+        <image class="img"  src="{{img[14]}}" binderror="binderrorimg" data-errorimg="14"/>  
+        <view class="title">活动/聚餐/商务</view>
+    </navigator>
+</view>
+<!--同学会|升学宴-->
+<view class="flex-container" wx:if="{{select==5}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=同学会&id=31&templet=tongxue3&cate_id=4&t=3">
+        <image class="img"  src="{{img[30]}}" binderror="binderrorimg" data-errorimg="30"/>  
+        <view class="title">同学会</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=同学会&id=32&templet=tongxue3&cate_id=4&t=3">
+        <image class="img"  src="{{img[31]}}" binderror="binderrorimg" data-errorimg="31"/>  
+        <view class="title">同学会</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=同学会&id=33&templet=tongxue3&cate_id=4&t=3">
+        <image class="img"  src="{{img[32]}}" binderror="binderrorimg" data-errorimg="32"/>  
+        <view class="title">同学会</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=金榜题名&id=16&templet=shengxue1&cate_id=5">
+        <image class="img"  src="{{img[15]}}" binderror="binderrorimg" data-errorimg="15"/>  
+        <view class="title">金榜题名</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=升学宴席&id=17&templet=shengxue1&cate_id=5">
+        <image class="img"  src="{{img[16]}}" binderror="binderrorimg" data-errorimg="16"/>  
+        <view class="title">升学宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=升学摆酒&id=18&templet=shengxue1&cate_id=5">
+        <image class="img"  src="{{img[17]}}" binderror="binderrorimg" data-errorimg="17"/>  
+        <view class="title">升学摆酒</view>
+    </navigator>
+</view>
+<!--生日-->
+<view class="flex-container" wx:if="{{select==6}}">
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日请柬&id=34&templet=shengri1&cate_id=7">
+        <image class="img"  src="{{img[33]}}" binderror="binderrorimg" data-errorimg="33"/>  
+        <view class="title">生日请柬</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日请柬&id=35&templet=shengri1&cate_id=7">
+        <image class="img"  src="{{img[34]}}" binderror="binderrorimg" data-errorimg="34"/>  
+        <view class="title">生日请柬</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日请柬&id=36&templet=shengri3&cate_id=7">
+        <image class="img"  src="{{img[35]}}" binderror="binderrorimg" data-errorimg="35"/>  
+        <view class="title">生日请柬</view>
+    </navigator>
+     <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日请柬&id=22&templet=shengri1&cate_id=7">
+        <image class="img"  src="{{img[21]}}" binderror="binderrorimg" data-errorimg="21"/>  
+        <view class="title">生日请柬</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日宴席&id=23&templet=shengri1&cate_id=7">
+        <image class="img"  src="{{img[22]}}" binderror="binderrorimg" data-errorimg="22"/>  
+        <view class="title">生日宴席</view>
+    </navigator>
+    <navigator class="h" url="/pages/qingjian/pages/qj/qj?title=生日请柬&id=24&templet=shengri2&cate_id=7">
+        <image class="img"  src="{{img[23]}}" binderror="binderrorimg" data-errorimg="23"/>  
+        <view class="title">生日请柬</view>
+    </navigator>
+</view>
+<import src="../../templet.wxml" />
+<template is="miniProgram" />
+<template is="footer" />
+

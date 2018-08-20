@@ -1,0 +1,21 @@
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+
+<view class="body">
+  <view class="title">{{lishi.title}}</view>
+  <view style="width:90%;margin:0 auto">
+    <ad unit-id="adunit-20856fc34c1b7528"></ad>
+  </view>
+  <view class="content">
+    <text class="icon">📺</text>
+    <text >{{lishi.content}}</text>
+  </view>
+  <ad unit-id="adunit-20856fc34c1b7528"></ad>
+  <view class="time">{{lishi.year}}年{{lishi.month}}月{{lishi.day}}日</view>
+</view>
+
+<view class="bt">
+  <button  open-type="share" >😁点我分享</button>
+</view>
+<template is="miniProgram" />
+<template is="footer" />

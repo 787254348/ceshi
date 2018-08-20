@@ -1,0 +1,33 @@
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<view class="title" bindtap="cancel">繁体字转换</view>
+<form bindsubmit="formSubmit" >
+  <view class="flex-wrap">
+    <view class="word">
+      <input  type="text" name="word" value="{{word ? word : ''}}" placeholder="看看您认识几个繁体字❓"/>
+    </view>
+    <button class="button" formType="submit">查询</button>
+  </view>
+</form>
+<view class="keyword" style="display:{{ty}}">
+  <view wx:for="{{text}}" wx:key="" bindtap="select" data-word="{{item}}">{{item}}</view>
+</view>
+<view class="content" wx:if="{{fanti}}">
+    <view class="h">
+      <view class="h-title">考考您认识以下几个繁体字</view>
+      <text selectable="true" class="typeface"><text>{{fanti}}</text></text>
+    </view>
+    <view class="wrap">
+        <button  class="h-share" open-type="share" style="width:58%">😁点我分享</button>
+        <button  bindtap="save"  class="h-save" style="width:40%"><image src="/i/pyq.png" class="f-x" style="top:8rpx"/>发圈</button>
+    </view>
+</view>
+<button wx:if="{{!word}}" class="onshare" open-type="share" >😁点我分享</button>
+<!--隐藏生成的图片-->
+<view style="position:reletive">
+    <canvas canvas-id="shareCanvas" style="width:320px;height:380px;position:absolute;top:-500px;"/> 
+</view>   
+  <!-- <canvas canvas-id="shareCanvas" style="width:320px;height:380px;" />    -->
+
+<ad unit-id="adunit-5ddea231147a58ae"></ad>
+<template is="footer" />

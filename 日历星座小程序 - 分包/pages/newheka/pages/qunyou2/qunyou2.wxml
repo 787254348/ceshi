@@ -1,0 +1,32 @@
+<import src="../../../templet.wxml" />
+<template is="tanchuang" data="{{...item}}"/>
+<import src="../../common.wxml" />
+<view class="ad" wx:if="{{vip==0&&options.v==0}}">
+    <ad unit-id="adunit-96ff75f878f25ad2"></ad>
+</view>
+
+<image class="img{{play}}" style="" src="/i/music.png" />
+<button type="primary" class="bofang" bindtap="{{yinyue ? 'audioPlay' : 'audioPause'}}">播放</button>
+<audio src="https://wap.goods100.com/heka/sound/bgm.mp3" id="myAudio" loop="true"></audio> 
+<image class="hats" src="/i/hg.png"/>
+<image class="avatarUrl" src="{{avatarUrl?avatarUrl:'https://wap.goods100.com/uploads/xcx/03.png'}}"/>
+<view wx:if="{{nickName}}" class="nickName">{{nickName}}</view>
+<view class="content">一壶老酒，散发友情的醇香；一首老歌，唱出曾经的美好；一声问候，则满载朋友的情谊。朋友，愿你安好，没事常联系！</view>
+<button class="onshare" open-type="share" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="onshare">分享给好友</button>
+<image class="img3" src="https://wap.goods100.com/heka/xinheka/qunyou/4.jpg"/>
+
+<view class="ad1" wx:if="{{vip==0&&options.v==0}}">
+    <ad unit-id="adunit-96ff75f878f25ad2"></ad>
+</view>
+
+<image class="img3" src="https://wap.goods100.com/heka/xinheka/qunyou/5.jpg"/>
+<form bindsubmit="heka" report-submit>
+    <input type="hidden" name="openid" value="{{openid}}" style="display:none" />
+    <button formType="submit" class="onshare"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">点击生成自己的祝福</button>
+</form>
+<!-- <navigator url="/pages/tabBar/heka/heka" open-type="switchTab" class="more" >更多请柬贺卡</navigator> -->
+<view wx:if="{{vip==0&&options.v==0}}">
+    <ad unit-id="adunit-96ff75f878f25ad2"></ad>
+</view>
+<template is="guanggao3" />
+<template is="msgItem" />

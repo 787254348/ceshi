@@ -1,0 +1,61 @@
+
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<view class="reload" style="display:{{style}};" bindtap="restart">
+  <image src="/i/2.png" />
+  <text>哎哟～网络不好，点击重新加载...</text>
+</view>
+<ad unit-id="adunit-7034a694fb48b213"></ad> 
+<view style="display:{{show}};background:#FFEBCD;border-top:20rpx solid #009933;">
+  <view>
+    <view class="month">{{year}}年{{month}}月</view>
+    <view class="wrap">
+      <view class="le" bindtap="lastdate">{{left}}</view>
+      <view class="date">{{date}}</view>
+      <view class="le" bindtap="nextdate">{{right}}</view>
+    </view>
+    <view class="nongli">{{nian}}农历{{yue}}<text>{{weekday}}</text></view>
+  </view>
+  <view class="bt">
+    <button  open-type="share" style="margin-right:2%;width:58%">😁点我分享</button>
+    <button  bindtap="save"  style="width:40%"><image  src="/i/pyq.png" class="f-x" style="top:8rpx;" />生成黄历发圈</button>
+  </view>
+  <!--隐藏生成的图片-->
+  <view style="position:reletive">
+    <canvas canvas-id="shareCanvas" style="width:375px;height:490px;position:absolute;top:-500px;"/> 
+  </view>   
+ 
+  <view class="content">
+    <view class="yi">
+      <text>宜</text>
+      <view class="y"> {{restation.yi}}</view>
+    </view>
+    <view class="ji">
+      <text>忌</text>
+      <view class="y"> {{restation.ji}}</view>
+    </view>
+  </view>
+  <view class="motto">{{motto}}</view> 
+  <view class="button1">
+    <view class="t">
+      <view class="left">
+        <text>沖煞</text> {{restation.chongsha}}</view>
+      <view class="right">
+        <text>五行</text> {{restation.wuxing}}</view>
+    </view>
+    <view class="c">
+      <view class="l">
+        <text>凶神宜趋</text>{{restation.xiongshen}} </view>
+      <view class="r">
+        <text>吉神宜忌</text>{{restation.jishen}}</view>
+    </view>
+    <view class="b">
+      <text>彭祖百忌</text>{{restation.baiji}}</view>
+  </view>
+  
+</view>
+<ad class="ad" unit-id="adunit-7034a694fb48b213"></ad>
+<template is="miniProgram" />
+<template is="footer" />
+ 
+

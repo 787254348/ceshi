@@ -1,0 +1,26 @@
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<view class="title">测测您的命运？</view>
+
+<form bindsubmit="formSubmit" report-submit>
+  <input type="hidden" name="sex" value="{{radioCheckVal}}" style="display:none" />
+  <view class="left">姓名：</view>
+  <input class="name"  type="text" name="name" value="" placeholder="输入您的名字" placeholder-style="color:#999" />
+  <view class="left">性别：</view>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio">
+      <radio value="1" checked="true" />
+      <text>男</text>
+    </label>
+    <label class="radio">
+      <radio value="2" />
+      <text>女</text>
+    </label>
+  </radio-group>
+  <button class="btn" formType="submit" >确定</button>
+</form>
+
+<button class="btn"  open-type="share" >分享给您的好友</button>
+<ad unit-id="adunit-bee94080e94ec9f5" ></ad>
+<import src="../../../templet.wxml" />
+<template is="footer" />

@@ -1,0 +1,82 @@
+
+<import src="../../../../templet.wxml" />
+  <template is="nav" />
+
+<view class="content">
+  <view class="cp">
+    <swiper class="slide-image" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:if="{{good.thumb.length<90&good.thumb.length>30}}">
+        <swiper-item>
+          <image src="{{good.thumb}}" class="slide-image" mode="aspectFit"  data-name="{{good.thumb}}" data-hi="{{good.thumb}}" data-nam="{{good.thumb1}}" data-nm="{{good.thumb2}}" bindtap="aaa" />
+        </swiper-item>
+      </block>
+      <block wx:if="{{good.thumb1.length<90&good.thumb1.length>30}}">
+        <swiper-item>
+          <image src="{{good.thumb1}}" class="slide-image" mode="aspectFit" data-name="{{good.thumb1}}" data-hi="{{good.thumb}}" data-nam="{{good.thumb1}}" data-nm="{{good.thumb2}}" bindtap="aaa" />
+        </swiper-item>
+      </block>
+      <block wx:if="{{good.thumb2}}">
+        <swiper-item>
+          <image src="{{good.thumb2}}" class="slide-image" mode="aspectFit"  data-name="{{good.thumb2}}" data-hi="{{good.thumb}}" data-nam="{{good.thumb1}}" data-nm="{{good.thumb2}}" bindtap="aaa" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="title" >
+    <view>🐰</view>
+    <text>{{good.title}}</text>
+  </view>
+
+  <view class="con">
+    <view class="introduce" >项目详情：</view>
+    <view class="describe"> {{good.content}}</view>
+  </view>
+  <view class="ad">
+      <ad unit-id="adunit-645756fa86e072b9"></ad> 
+  </view>
+  <view class="price">
+    <view class="money">投资金额：</view>
+    <view class="num" wx:if="{{good.fee>0}}">{{good.fee}}万元</view>
+    <view class="num" wx:else>面议</view>
+  </view>
+
+  <navigator wx:if="{{good.honor_id==1}}" class="honor" url="/pages/honor/pages/myhonor/myhonor?company={{good.company}}&groupid={{good.groupid}}&honor_id={{good.honor_id}}&username={{good.username}}" open-type="redirect">
+    <icon class="success" type="success" size="15" /> 该商家已通过资质认证</navigator>
+
+  <view class="information">
+    <navigator url="/pages/pay/pages/pay/pay">
+      <image wx:if="{{good.groupid>6}}" class="vip" src="/image/vip.png" />
+    </navigator>
+    <navigator open-type="redirect" url="/pages/info/pages/company/company?company={{good.company}}&groupid={{good.groupid}}&honor_id={{good.honor_id}}&username={{good.username}}">
+      <view class="company">公司:
+        <text>{{good.company}}</text>
+      </view>
+    </navigator>
+    <view>地址: {{good.address}}</view>
+    <!-- <view wx:if="{{good.mobile}}" bindtap="mobile" data-name="{{good.mobile}}">☎直接拨打:
+      <text style="color:#009933">{{good.mobile}}</text>
+    </view> -->
+    <navigator url="/pages/mingpian/pages/mpxq/xq?scene={{good.userid}}" class="mingpian" ><text>☎点此查看他名片</text></navigator>
+    <view class="ss">电话咨询记得说是在
+      <text class="benyi">［本衣］</text>小程序［招商加盟信息］找到您的信息的哟～</view>
+
+    <button wx:if="{{!storage}}" class="shouquan" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点此授权,方可咨询！</button>
+    <view style="border-top:0" wx:if="{{storage}}">
+      <navigator open-type="redirect" url="/pages/info/pages/inquiry/inquiry?uid={{storage}}&itemid={{options.itemid}}&title={{good.title}}&username={{good.username}}">
+        <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary" class="btn"> 立即咨询 </button>
+      </navigator>
+    </view>
+    <view style="border-top:0" wx:else>
+      <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="shouquan" class="btn"> 立即咨询 </button>
+    </view>
+    <button type="primary" open-type="share" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="onshare" class="b-t">转发到微信群推广</button>
+  </view>
+  <view class="wrap">
+    <navigator open-type="switchTab" url="/pages/tabBar/ksfb/ksfb">发布商机</navigator>
+    <navigator open-type="switchTab" url="/pages/tabBar/me/me">我的</navigator>
+    <navigator url="/pages/pay/pages/payment/payment"><view>本</view>财富通</navigator>
+  </view>
+  <template is="miniProgram" />
+  <view class="c"> © 2018 本衣网络</view>
+</view>

@@ -1,0 +1,12 @@
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<view class="title">{{options.title}}</view>
+<view class="date">{{options.date}}</view>
+<ad unit-id="adunit-a1d6e705c1749542" ></ad>
+<image class="img" src="{{options.img1}}" />
+<image wx:if="{{options.img2}}" class="img" src="{{options.img2}}" />
+<image wx:if="{{options.img3}}" class="img" src="{{options.img3}}" />
+<button  open-type="share" >😁点我分享</button>
+<ad unit-id="adunit-a1d6e705c1749542" ></ad>
+<template is="footer" />
+<view class="shuoming">以上数据来源于聚合数据（juhe.cn）</view>

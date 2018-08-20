@@ -1,0 +1,31 @@
+<template name="nav">
+  <view class="nav">
+    <navigator open-type="switchTab" url="/pages/tabBar/home/home">首页</navigator>
+    <navigator open-type="switchTab" url="/pages/tabBar/ksfb/ksfb">发布供应</navigator>
+    <navigator open-type="switchTab" url="/pages/tabBar/mybuy/mybuy">发布求购</navigator>
+    <navigator open-type="switchTab" url="/pages/tabBar/buy/buy">求购信息</navigator>
+    <navigator open-type="switchTab" url="/pages/tabBar/me/me">个人</navigator>
+    <navigator url="/pages/pay/pages/qgpay/qgpay">💰供货通</navigator>
+    <navigator url="/pages/pay/pages/payment/payment"><image src="/image/cft.png" />财富通</navigator>
+    <navigator url="/pages/pay/pages/pay/pay"><image src="/image/vip.png" />升级</navigator>
+  </view>
+</template>
+
+<template name="miniProgram">
+  <navigator target="miniProgram" open-type="navigate" app-id="wx1a664e0d81cf5f16" path="" extra-data="" version="release" class="view-cell" style="border-top:20rpx solid #eeeeee" >
+    <view class="view-cell-primary">
+      <image class="view-img" style="border-radius:50%;" src="/image/zst.png" />
+      <text class="view-name">招商加盟信息<text style="color:#009933;font-size:24rpx">[招商加盟代理推广]</text></text>
+      <text class="right">{{right}}</text>
+    </view>
+  </navigator>
+  <navigator target="miniProgram" open-type="navigate" app-id="wx5e84d3e0b9a49a3e" path="" extra-data="" version="release" class="view-cell" >
+    <view class="view-cell-primary">
+      <image class="view-img" src="/image/8.png" />
+      <text class="view-name">电子请柬贺卡<text style="color:#009933;font-size:24rpx">[电子请柬贺卡，解梦查运]</text></text>
+      <text class="right">{{right}}</text>
+    </view>
+  </navigator>
+</template>
+
+

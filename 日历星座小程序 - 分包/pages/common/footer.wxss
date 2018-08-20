@@ -1,0 +1,61 @@
+.onshare {
+  background-color: #00bab8;
+  width: 96%;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color:#fff;
+}
+
+.zs-r {
+  float: right;
+  margin-right: 20rpx;
+}
+
+.fz-l {
+  display: inline-block;
+  line-height: 50rpx;
+}
+
+.zs {
+  margin-left: 4%;
+  margin-top: 20rpx;
+}
+
+.img {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 10rpx;
+  margin-right: 10rpx;
+}
+
+.ben {
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #093;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
+
+.fz {
+  padding-left: 4%;
+  margin-top: 30rpx;
+  border-top: 4rpx solid #ccc;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.copy {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+}

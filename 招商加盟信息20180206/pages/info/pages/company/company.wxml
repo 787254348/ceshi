@@ -1,0 +1,61 @@
+<!--pages/company/company.wxml-->
+<view class="page home">
+  <!--轮播banner-->
+  <view class="banner">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="ad">
+      <ad unit-id="adunit-cb1acb5fe09470d4"></ad> 
+  </view>
+  <view class="nav" style="padding-top:10rpx;border-top:6rpx solid #ededed;">
+    <navigator url="/pages/tabBar/home/home" open-type="switchTab">首页</navigator>
+    <navigator style="color:#009933;border:1rpx solid #009933" url="/pages/tabBar/ksfb/ksfb" open-type="switchTab">发布商机</navigator>
+    <navigator wx:if="{{me_uid}}" url="/pages/mingpian/pages/mpj/mpj?uid={{me_uid}}" >名片夹</navigator>
+    <navigator url="/pages/tabBar/me/me" open-type="switchTab">我的</navigator>
+  </view>
+  <view class="title">
+    <text class="txt">🏠</text>{{options.company}}</view>
+  <navigator class="honor1" url="/pages/honor/pages/myhonor/myhonor?company={{options.company}}&groupid={{options.groupid}}&honor_id={{options.honor_id}}&username={{options.username}}" open-type="redirect">
+    <icon class="success" type="success" size="15" /> 商家认证信息</navigator>
+  <button open-type="share" class="share">转发到微信群，推广我的招商</button>
+  <!--商品goods-->
+  <view style="display:{{style}};border-top:4rpx solid #00cc00;margin-top:10rpx">
+    <view class="goods">
+      <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true"  bindscrolltolower="pullUpLoad">
+        <view class="goods-box" wx:for="{{goodslist}}" data-id="{{item.itemid}}">
+          <navigator open-type="redirect" url="/pages/info/pages/good/good?itemid={{item.itemid}}&title={{item.title}}" hover="true" hover-stay-time="1000">
+            <image class="gds-img" wx:if="{{item.thumb.length<90&item.thumb.length>45}}" src="{{item.thumb}}" />
+            <image class="gds-img" wx:elif="{{item.thumb1.length<90&item.thumb1.length>45}}" src="{{item.thumb1}}" />
+            <image class="gds-img" wx:else src="{{item.thumb2}}" />
+            <text class="gds-title">{{item.title}}  </text>
+            <view wx:if="{{item.groupid>6||item.honor_id==1}}" class="address">{{item.address}}</view>
+            <view wx:else class="address" style="top:-120rpx">{{item.address}}</view>
+            <view class="money" wx:if="{{item.fee>0}}">
+              💰 投资金额：
+              <text class="num">{{item.fee}}</text> 万元
+            </view>
+            <view class="money" wx:else>
+              💰 投资金额：
+              <text class="num">面议</text>
+            </view>
+          </navigator>
+          <navigator url="/pages/pay/pages/pay/pay">
+            <image wx:if="{{item.groupid>6}}" class="vip" src="/image/vip.png" />
+          </navigator>
+          <navigator wx:if="{{item.honor_id==1&&item.groupid>6}}" url="/pages/honor/pages/myhonor/myhonor?username={{item.username}}&company={{item.company}}&groupid={{item.groupid}}&honor_id={{item.honor_id}}" class="honor">已认证</navigator>
+          <navigator wx:elif="{{item.honor_id==1&&item.groupid==6}}" url="/pages/honor/pages/myhonor/myhonor?username={{item.username}}&company={{item.company}}&groupid={{item.groupid}}&honor_id={{item.honor_id}}" class="honor" style="left:280rpx">已认证</navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view style="display:{{reply}};text-align:center;padding-top:30%;color:#00cc66;font-size:50rpx;" bindtap="onLoad">
+    哎哟～网络不好，
+    <view class="reply">点击重新加载...</view>
+  </view>
+</view>

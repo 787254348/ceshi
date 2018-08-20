@@ -1,0 +1,174 @@
+<!--calendar.wxml-->
+<view>
+
+  <ad unit-id="adunit-5d0ee7b45e6293a1" ></ad>
+  <view class="jiemeng">
+    <navigator open-type="switchTab" url="/pages/tabBar/jiemeng/jiemeng">
+      <view class="jt">周公解梦</view>
+    </navigator>
+    <form bindsubmit="formSubmit" report-submit>
+      <input type="hidden" name="num" value="1" style="display:none" />
+      <input type="hidden" name="openid" value="{{openid}}" style="display:none" />
+      <input class="reselect" type="text" name="content" value="" placeholder="填写您的梦，如：花" placeholder-style="color:#999" />
+      <button class="btn-area" formType="submit" >解 梦</button>
+    </form>
+  </view>
+
+  <!-- <view class="heka">
+    <navigator url="/pages/tabBar/qingjian/qingjian" open-type="switchTab" hover-class="other-navigator-hover">
+      📝请柬邀请函
+    </navigator>
+    <navigator style="float:right" url="/pages/tabBar/heka/heka" open-type="switchTab" hover-class="other-navigator-hover">
+      🎁电子贺卡
+    </navigator>
+  </view> -->
+
+  <view class="wrap">
+      <navigator class="q-header" url="/pages/tabBar/qingjian/qingjian" open-type="switchTab" hover-class="other-navigator-hover">
+          <view>📝请柬邀请函</view>
+      </navigator>
+      <view class="qj" bindtap="qingjian" data-num="1">结婚</view>
+      <view class="qj" bindtap="qingjian" data-num="2">宝宝百日/满月</view>
+      <view class="qj" bindtap="qingjian" data-num="3">乔迁新房</view>
+      <view class="qj" bindtap="qingjian" data-num="4">聚餐/活动/商务</view>
+      <view class="qj" bindtap="qingjian" data-num="5">同学会/升学宴</view>
+      <view class="qj" bindtap="qingjian" data-num="6">生日宴</view>
+  </view>
+
+  <view class="wrap">
+      <navigator class="q-header" url="/pages/tabBar/heka/heka" open-type="switchTab" hover-class="other-navigator-hover">
+          <view>🎁电子贺卡</view>
+      </navigator>
+      <view class="hk" bindtap="heka" data-num="1">热门</view>
+      <view class="hk" bindtap="heka" data-num="2">节日</view>
+      <view class="hk" bindtap="heka" data-num="3">生日</view>
+      <view class="hk" bindtap="heka" data-num="4">其他</view>
+  </view>
+
+  <navigator class="tp" url="/pages/laohuangli/pages/xiaohua/xiaohua">
+    <view class="tt"><text>每日一笑</text></view>
+      <view class="cc">
+        <text>😂</text>{{resposition[0].content}}</view>
+      <view class="rt">{{right}}</view> 
+  </navigator>
+
+  <navigator class="huangli" url="/pages/laohuangli/pages/huangli/huangli?yangli={{restation.yangli}}">
+    <view class="top">
+      <view class="date">{{toDate}}</view>
+      <view class="year">
+        <text>{{toYear}}年</text>
+        <text>{{toMonth}}月{{weekday}}</text>
+      </view>
+      <view class="Detail">
+        农历{{nongliDetail}}
+      </view>
+      <view class="h" >今日老黄历</view>
+    </view>
+    <view class="button">
+      <view class="t1">
+        <text>宜</text>
+        <view class="y">{{restation.yi}}</view>
+      </view>
+      <view class="b1">
+        <text>忌</text>
+        <view class="y">{{restation.ji}}</view>
+      </view>
+    </view>
+  </navigator>
+
+  <picker mode="selector" value="{{array[index]}}" bindchange="xingzuochange" range="{{array}}" class="select">
+    <view class="str">
+      <view class="str_t">{{star.name}}</view>
+      <view wx:if="{{star.name=='白羊座'}}" class="str_b">3月21日-4月19日</view>
+      <view wx:if="{{star.name=='金牛座'}}" class="str_b">4月20日-5月20日</view>
+      <view wx:if="{{star.name=='双子座'}}" class="str_b">5月21日-6月21日</view>
+      <view wx:if="{{star.name=='巨蟹座'}}" class="str_b">6月22日-7月22日</view>
+      <view wx:if="{{star.name=='狮子座'}}" class="str_b">7月23日-8月22日</view>
+      <view wx:if="{{star.name=='处女座'}}" class="str_b">8月23日-9月22日</view>
+      <view wx:if="{{star.name=='天秤座'}}" class="str_b">9月23日-10月23日</view>
+      <view wx:if="{{star.name=='天蝎座'}}" class="str_b">10月24日-11月22日</view>
+      <view wx:if="{{star.name=='射手座'}}" class="str_b">11月23日-12月21日</view>
+      <view wx:if="{{star.name=='摩羯座'}}" class="str_b">12月22日-1月19日</view>
+      <view wx:if="{{star.name=='水瓶座'}}" class="str_b">1月20日-2月18日</view>
+      <view wx:if="{{star.name=='双鱼座'}}" class="str_b">2月19日-3月20日</view>
+    </view>
+  </picker>
+  <navigator hover-class="none" url="/pages/laohuangli/pages/detail/detail?catid={{star.name}}&type=today&date=今日">
+    <view class="st">
+      <view class="stl">
+        <view class="c">综合指数
+          <text>{{star.all}}</text>
+        </view>
+        <view class="c">幸运数字
+          <text>{{star.number}}</text>
+        </view>
+        <view class="c">幸运颜色
+          <text>{{star.color}}</text>
+        </view>
+        <view class="c">速配星座
+          <text>{{star.QFriend}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="sc">
+      {{star.summary}}
+    </view>
+  </navigator>
+
+  <view class="jiemeng">
+    <navigator  url="/pages/huoxing/pages/hx/hx">
+      <text style="float:left;margin-left:1rem;font-size:42rpx">🎓</text><view class="jt" style="font-size:36rpx;width:240rpx;margin-left:3rem;border-radius:10rpx;height:52rpx;line-height:52rpx;">火星文转换</view>
+    </navigator>
+    <form bindsubmit="huoxing" >
+      <input class="reselect" type="text" name="content" value=""  placeholder="地球人都不认识的火星文❓" placeholder-style="color:#999;font-size:32rpx" />
+      <button class="btn-area" formType="submit" >查 询</button>
+    </form>
+  </view>
+
+  <view class="caipiao">
+      <navigator style="width:96%" url="/pages/yule/pages/cs/cs">👤测测您的命运分数</navigator>
+  </view>
+  
+  <navigator class="tp" url="/pages/laohuangli/pages/lishi/lishi">
+    <view class="tt"><text>历史上的今天</text></view>
+    <view class="cc"><text>📺</text>{{lishi[0].des}}</view>
+    <view class="rt">{{right}}</view> 
+  </navigator>
+
+  <view class="jiemeng">
+    <navigator  url="/pages/huoxing/pages/ft/ft">
+      <text style="float:left;margin-left:1rem;font-size:42rpx">🎓</text><view class="jt" style="font-size:36rpx;width:240rpx;margin-left:3rem;border-radius:10rpx;height:52rpx;line-height:52rpx;">繁体字转换</view>
+    </navigator>
+    <form bindsubmit="fanti" >
+      <input class="reselect" type="text" name="content" value=""  placeholder="看看您认识几个繁体字❓" placeholder-style="color:#999;font-size:32rpx" />
+      <button class="btn-area" formType="submit" >查 询</button>
+    </form>
+  </view>
+
+  <view class="jiemeng">
+    <navigator style="height:90rpx;padding-top:1px;" url="/pages/zidian/pages/zidian/zidian?key="><view class="jt">新华字典</view></navigator>
+    <form bindsubmit="zidian" report-submit>
+      <input type="hidden" name="openid" value="{{openid}}" style="display:none" />
+      <input style="margin-top:0;" class="reselect" type="text" name="content" value="" placeholder="填写您要查的字，如：花" placeholder-style="color:#999" />
+      <button class="btn-area" formType="submit" >查字典</button>
+    </form>
+  </view>
+
+  <view class="jiemeng">
+    <navigator style="height:90rpx;padding-top:1px;" url="/pages/zidian/pages/chengyu/chengyu?key="><view class="jt">成语词典</view></navigator>
+    <form bindsubmit="chengyu" report-submit>
+      <input type="hidden" name="openid" value="{{openid}}" style="display:none" />
+      <input style="margin-top:0;" class="reselect" type="text" name="content" value="" placeholder="填写您要查的成语，如：春华秋实" placeholder-style="color:#999;font-size:28rpx" />
+      <button class="btn-area" formType="submit" >查成语</button>
+    </form>
+  </view>
+  <view class="caipiao">
+    <navigator style="width:96%" url="/pages/toutiao/pages/liebiao/liebiao">📻今日新鲜事</navigator>
+  </view>
+  <button class="onshare" open-type="share" >😁点我分享给您的好友</button>
+  <ad class="ad" unit-id="adunit-5d0ee7b45e6293a1"></ad>
+  <import src="../../templet.wxml" />
+  <template is="miniProgram" />
+  <template is="footer" />
+  <view class="shuoming">本小程序部分数据来源于聚合数据（juhe.cn）</view>
+</view>

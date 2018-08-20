@@ -1,0 +1,375 @@
+<view class="body">
+  <image class="top" src="/i/top.png" />
+  <!--结婚请柬-->
+  <view wx:if="{{options.cate_id==1}}" class="content">
+    <form bindsubmit="jiehun" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b">
+          <text class="left">新郎：</text>
+          <input class="name" name="yname" value="" maxlength="10" placeholder="李雷" placeholder-style="color:#ccc"/>
+          <text class="xname">新娘：</text>
+          <input class="name" name="xname" value="" maxlength="10" placeholder="韩梅梅" placeholder-style="color:#ccc"/>
+        </view>
+        <view class="b">
+          <text class="left" style="width:194rpx">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+      <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+
+  <!--满月/百日请柬-->
+  <view wx:if="{{options.cate_id==2||options.cate_id==6||options.cate_id==8}}"  class="content">
+    <form bindsubmit="manyue" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <input type="hidden" name="sex" value="{{radioCheckVal}}" style="display:none" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b1">
+          <input class="name" style="width:376rpx" name="bname" value="" placeholder="宝宝的名字" placeholder-style="color:#ccc" />
+          <text wx:if="{{options.cate_id==2}}" class="theme">的满月酒</text>
+          <text wx:if="{{options.cate_id==6}}" class="theme">的百日宴</text>
+          <text wx:if="{{options.cate_id==8}}" class="theme">的庆灯宴</text>
+        </view>
+        <view class="b1">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio">
+              <radio value="爱子" checked="true" />
+              <text style="color:#B96A3F;">爱子</text>
+            </label>
+            <label class="radio">
+              <radio value="爱女" />
+              <text style="color:#B96A3F;">爱女</text>
+            </label>
+            <label class="radio">
+              <radio value="龙凤胎" />
+              <text style="color:#B96A3F;">龙凤胎</text>
+            </label>
+            <label class="radio">
+              <radio value="爱孙" />
+              <text style="color:#B96A3F;">爱孙</text>
+            </label>
+          </radio-group>
+        </view>
+        <view class="b1">
+          <text class="left" style="width:194rpx">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <input class="name" style="width:456rpx" name="tname" value="" placeholder="张三" placeholder-style="color:#ccc" />
+          <text class="inviter">敬邀</text>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+      <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+
+  <!--乔迁请柬-->
+  <view wx:if="{{options.cate_id==3}}" class="content">
+    <form bindsubmit="qiaoqian" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b">
+          <text class="left" style="width:34%">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="b">
+          <input class="name" style="width:376rpx" name="tname" value="" placeholder="张三" placeholder-style="color:#ccc" />
+          <text class="inviter1">敬邀(屋主)</text>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+        <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+  <!--同学会|商务请柬-->
+  <view wx:if="{{options.cate_id==4}}" class="content">
+    <form bindsubmit="tongxue" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b1">
+          <text class="left" style="width:34%">宴会主题：</text>
+          <input wx:if="{{options.t==1}}" class="name" style="width:376rpx" name="ytitle" value="" placeholder="某某餐厅/公司开业" placeholder-style="color:#ccc" maxlength="-1" />
+          <input wx:if="{{options.t==2}}" class="name" style="width:376rpx" name="ytitle" value="" placeholder="聚餐/商务活动" placeholder-style="color:#ccc" maxlength="-1" />
+          <input wx:if="{{options.t==3}}" class="name" style="width:376rpx" name="ytitle" value="" placeholder="1999届清华同学聚会" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left" style="width:34%">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <input class="name" style="width:456rpx" name="tname" value="" placeholder="张三" placeholder-style="color:#ccc" />
+          <text class="inviter">敬邀</text>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k" wx:key="*this">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+      <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+
+  <!--升学请柬-->
+  <view wx:if="{{options.cate_id==5}}" class="content">
+    <form bindsubmit="shengxue" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b1">
+          <input class="name" style="width:376rpx" name="bname" value="" />
+          <text class="theme">的升学宴</text>
+        </view>
+        <view class="b1">
+          <text class="left" style="width:194rpx">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <input class="name" style="width:456rpx" name="tname" value="" placeholder="张三" placeholder-style="color:#ccc" />
+          <text class="inviter">敬邀</text>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+        <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+  <!--生日请柬-->
+  <view wx:if="{{options.cate_id==7}}" class="content">
+    <form bindsubmit="shengri" report-submit>
+      <view class="box1">
+        <input type="hidden" name="imgUrl" value="{{ss}}" style="display:none;" maxlength="-1" />
+        <input type="hidden" name="title" value="{{options.title}}" style="display:none;" />
+        <input type="hidden" name="id" value="{{options.id}}" style="display:none;" />
+        <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+        <input type="hidden" name="templet" value="{{options.templet}}" style="display:none;" />
+        <view class="tishi">填写完以下信息，点确定即可自动生成请柬</view>
+        <view class="b1">
+          <input class="name" style="width:376rpx" name="bname" value="" placeholder="韩梅梅" placeholder-style="color:#ccc"/>
+          <text class="theme">的生日宴</text>
+        </view>
+        <view class="b1">
+          <text class="left" style="width:194rpx">设宴酒店：</text>
+          <input class="name" style="width:376rpx" name="hotel" value="" placeholder="喜来登大酒店二层鸳鸯厅" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">地址：</text>
+          <input class="name" style="width:456rpx" name="address" value="" placeholder="广州市天河区科韵路25号" placeholder-style="color:#ccc" maxlength="-1" />
+        </view>
+        <view class="b1">
+          <text class="left">日期：</text>
+          <picker class="time" mode="date" name="date" value="{{date}}" start="2018-01-01" end="2023-12-12" bindchange="bindDateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <text class="left">时间：</text>
+          <picker class="time" mode="time" name="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+        <view class="b1">
+          <input class="name" style="width:456rpx" name="tname" value="" placeholder="张三" placeholder-style="color:#ccc" />
+          <text class="inviter">敬邀</text>
+        </view>
+        <view class="img-box">
+          <block wx:for="{{a}}" wx:for-index="k">
+            <image class="img" src="{{a[k]}}" />
+            <icon type="cancel" size="30" color="red" class="cancel" />
+            <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}"></view>
+          </block>
+        </view>
+        <button wx:if="{{a.length<3}}" class="btn" bindtap="chooseimage">+</button>
+        <button class="btn-area" wx:if="{{status==1}}" formType="submit">确定</button>
+        <button class="btn-area1" wx:else>制作中...</button>
+      </view>
+    </form>
+    <view wx:if="{{vip==0}}">
+        <ad class="ad" unit-id="adunit-3d63dffc6055a452"></ad>
+    </view>
+  </view>
+
+  <image class="down" src="/i/down.png" />
+</view>

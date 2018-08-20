@@ -1,0 +1,50 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.7",
+	"appid": "wx1a664e0d81cf5f16",
+	"projectname": "%E6%8B%9B%E5%95%86%E5%8A%A0%E7%9B%9F%E4%BF%A1%E6%81%AF12",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "名片详情页",
+					"pathName": "pages/mingpian/pages/mpxq/xq",
+					"query": "name=ss&user=123"
+				},
+				{
+					"id": -1,
+					"name": "名片详情页",
+					"pathName": "pages/tabBar/mingpian/mingpian",
+					"query": ""
+				}
+			]
+		}
+	}
+}

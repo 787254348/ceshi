@@ -1,0 +1,39 @@
+page{
+  width:96%;
+  margin-left:2%;
+}
+.title {
+  text-align: center;
+  margin-top:100rpx;
+  margin-bottom:20rpx;
+  font-size: 46rpx;
+  color: #00bab8;
+}
+.left{
+  width:18%;
+  float:left;
+  line-height:70rpx;
+  font-size:40rpx;
+}
+.name{
+  width:70%;
+  display:inline-block;
+  height:70rpx;
+  line-height:70rpx;
+  padding-left:1rem;
+  border:1rpx solid #ccc;
+}
+.radio-group{
+  height:70rpx;
+  line-height:70rpx;
+}
+.radio{
+  margin-right:40rpx;
+}
+.btn{
+  margin-top:30rpx;
+  background:#00bab8;
+  color:#fff;
+  margin-bottom:30rpx;
+}
+

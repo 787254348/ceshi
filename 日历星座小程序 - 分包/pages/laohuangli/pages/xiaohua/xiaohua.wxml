@@ -1,0 +1,48 @@
+<!--pages/xiaohua/xiaohua.wxml-->
+<button class="share" open-type="share">
+  <image class="sh" src="/i/share.png" />
+</button>
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<!-- <view>
+  <view class="{{left}}" bindtap="xiaohua">笑话大全</view>
+  <view class="{{right}}" bindtap="qutu">趣图</view>
+</view> -->
+
+<view  class="box">
+  <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="pullUpLoad">
+    <view class="b" wx:for="{{resposition}}" wx:key="">
+      <navigator class="content" url="/pages/laohuangli/pages/xhd/xhd?hashId={{index}}&share=1">
+        <text class="dy">{{dy}}</text>
+        <view class="txt">
+          <text style="padding-right:1em">😂</text>{{item.content}}
+        </view>
+        <view class="time">{{item.updatetime}}</view>
+      </navigator>
+       <ad unit-id="adunit-35f857f4da5ea962"></ad>
+    </view>
+  </scroll-view>
+  <view class="more">
+    <text class="more-title">{{moreText}}</text>
+  </view>
+</view>
+
+<!-- <view wx:if="{{num==2}}" class="box">
+  <scroll-view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltolower="pullUpLoad1">
+    <view class="b" wx:for="{{resposition1}}" data-id="{{item.itemid}}">
+      <navigator class="content1" url="/pages/laohuangli/pages/xhd/xhd?hashId={{index}}&share=1&ty=2">
+        <view class="txt" style="color:#00bab8">
+          <text style="padding-right:1em">😂</text>{{item.content}}</view>
+        <image class="gds-img" src="{{item.url}}" />
+        <view class="time">{{item.updatetime}}</view>
+        <ad unit-id="adunit-35f857f4da5ea962"></ad>
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class="more">
+    <text class="more-title">{{moreText1}}</text>
+  </view>
+</view> -->
+<ad unit-id="adunit-35f857f4da5ea962"></ad>
+<button class="onshare" style="background-color:#00bab8;" open-type="share" type="primary">😁如果您喜欢我们欢迎分享给您的好友</button>
+<template is="footer" />

@@ -1,0 +1,167 @@
+page {
+  font-family: 微软雅黑;
+  height: 100%;
+  background: #f5f0dd;
+}
+
+input {
+  color: #aaa;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  height: 170rpx;
+  width: 100%;
+  position: absolute;
+}
+
+.down {
+  height: 36rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.content {
+  height: 98%;
+  width: 92%;
+  border-left: 1rpx solid red;
+  border-right: 1rpx solid red;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 60rpx;
+  padding-top: 120rpx;
+}
+
+.box1 {
+  padding: 60rpx;
+}
+
+.tishi {
+  font-size: 28rpx;
+  color: red;
+  text-align: center;
+}
+
+
+.btn {
+  width: 160rpx;
+  height: 170rpx;
+  font-size: 140rpx;
+  line-height: 150rpx;
+  color: #ccc;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.b {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.b1{
+  height:72rpx;
+  line-height:72rpx;
+}
+
+.left {
+  float: left;
+  color: #b96a3f;
+  width: 114rpx;
+}
+
+.name {
+  border-bottom: 1rpx solid #ccc;
+  width: 166rpx;
+  display: inline-block;
+  height: 60rpx;
+  margin-top: 20rpx;
+  color: #f80;
+}
+
+.xname {
+  margin-left: 10rpx;
+  position: relative;
+  top: -20rpx;
+  color: #b96a3f;
+  width: 114rpx;
+  display: inline-block;
+}
+
+.theme {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  float: right;
+  color: #b96a3f;
+}
+
+.time {
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 114rpx;
+  color: #f80;
+}
+
+.btn-area {
+  width: 100%;
+  background-color: #c47f3e;
+  color: #fff;
+  margin-top: 250rpx;
+}
+
+.btn-area1 {
+  width: 100%;
+  background-color: #ccc;
+  color: #666;
+  margin-top: 250rpx;
+}
+
+.inviter {
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+  float: right;
+  color: #b96a3f;
+}
+
+.inviter1 {
+  width: 32%;
+  display: inline-block;
+  text-align: right;
+  float: right;
+  color: #b96a3f;
+}
+
+.img-box {
+  margin-top: 50rpx;
+}
+
+.img {
+  height: 170rpx;
+  width: 28%;
+  float: left;
+}
+
+.cancel {
+  float: left;
+  margin-left: -30rpx;
+  margin-top: -30rpx;
+}
+
+.delete {
+  float: left;
+  margin-left: -60rpx;
+  margin-top: -30rpx;
+  width: 30px;
+  height: 30px;
+}
+
+.ad{
+  margin-top: -44rpx;
+}

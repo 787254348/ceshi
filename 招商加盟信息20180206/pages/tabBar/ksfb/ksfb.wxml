@@ -1,0 +1,56 @@
+<form bindsubmit="formSubmit" report-submit>
+  <view class="con">
+    <block wx:for="{{ss}}" wx:for-index="k">
+      <input type="hidden" name="imgUrl{{k+1}}" value="{{ss[k]}}" style="display:none;" />
+    </block>
+    <input type="hidden" name="uid" value="{{storage}}" style="display:none;" />
+    <input type="hidden" name="groupid" value="{{groupid}}" style="display:none;" />
+    <input type="hidden" name="openid" value="{{openid}}" style="display:none;" />
+    <input type="hidden" name="username" value="{{username}}" style="display:none;" />
+    <input type="hidden" name="num" value="{{num}}" style="display:none;" />
+    <input type="hidden" name="address" value="{{province}}{{city}}{{district}}" style="display:none;" />
+    <view class="section">
+      <picker name="cateId" bindchange="bindPickerChange" value="{{cateIdArray[index]}}" range="{{array}}">
+        <view class="picker leimu">
+          类别:{{array[index]}}
+        </view>
+        <view class="arr1">></view>
+      </picker>
+    </view>
+    <view class="leimu">
+      <view>标题:</view>
+      <textarea class="qian tit" name="title" maxlength="18" placeholder-style="font-size:28rpx;" placeholder="必须含关键词如：麦当劳/加盟，否则客户搜索不到您,也会被删除！（标题字数18个字以内）" />
+    </view>
+    <view class="leimu price">
+      <view style="float:left">金额:
+        <text class="bitian" >(必填)</text>
+      </view>
+      <input class="{{fee}}" type="digit" name="fee" bindfocus="cc" value="6" />
+      <view>万元</view>
+    </view>
+    <view class="leimu contect">
+      <view>联系方式:</view>
+      <view class="bitian">(必填)</view>
+      <input class="qian tel" type="number" maxlength="11" name="telephone" />
+    </view>
+    <view class="leimu">
+      <view class="detail">项目详情:</view>
+      <textarea name="content" placeholder="可从别处复制粘贴过来哦，越详细商机权重越高，曝光越多询单越多(必填)。" maxlength="-1" />
+    </view>
+    <view style="padding-left:5%">
+      <block class="tupain" wx:for="{{a}}" wx:for-index="k">
+        <image class="img" src="{{a[k]}}" />
+        <view class="delete" plain="true" bindtap="delete1" data-name="{{k}}" style="border:none"></view>
+      </block>
+      <button class="btn"  bindtap="chooseimage">+</button>
+    </view>
+    <button wx:if="{{!storage}}" class="shouquan" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点此授权,方可发布！</button>
+    <button class="btn-area" formType="submit" >确认发布</button>
+    <view class="bottom" >发布成功
+      <text>8</text>分钟后首页可看到</view>
+  </view>
+</form>
+<view class="ad" style="margin-top:20rpx">
+      <ad unit-id="adunit-35e4e89cc138b379"></ad> 
+</view>
+<view class="c"> © 2018 本衣网络</view>

@@ -1,0 +1,46 @@
+<template name="msgItem">
+  <view class="header">
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/calendar/calendar">
+      <button>首页</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/xingzuo/xingzuo">
+      <button>运势</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/jiemeng/jiemeng">
+      <button>解梦</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/qingjian/qingjian">
+      <button style="background-color:#009933;">请柬</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/heka/heka">
+      <button style="background-color:#009933;">贺卡</button>
+    </navigator>
+  </view>
+</template>
+
+<template name="miniProgram">
+  <navigator target="miniProgram" open-type="navigate" app-id="wx78d67b2f2e81ffea" path="" extra-data="" version="release" class="fz" >
+    <view class="ben">本</view>
+    <text class="fz-l">服装批发采购<text style="color:#009933;font-size:24rpx">[服装供求信息平台]</text></text>
+    <text class="zs-r">></text>
+  </navigator>
+  <navigator target="miniProgram" open-type="navigate" app-id="wx1a664e0d81cf5f16" path="" extra-data="" version="release" class="zs" >
+    <image class="b-img" src="/i/zst.png" />
+    <text>招商加盟信息<text style="color:#009933;font-size:24rpx">[招商加盟代理推广]</text></text>
+    <text class="zs-r">></text>
+  </navigator>
+</template>
+
+<template name="footer">
+  <view class="copy"> © 2018 本衣网络</view>
+</template>
+
+<template name="tanchuang">
+  <view class="{{b}}"></view> 
+  <view style="display:{{c}};width:80%;position: fixed;top:35%;background: #fff;left:10%;z-index:999">
+      <view style="text-align:center;font-size:36rpx;line-height:60rpx;margin-top:30rpx;color:#666;">😂{{tt}}😄</view>
+      <view bindtap="charge" style="text-align:center;background:#00bab8;color:#fff;width:300rpx;margin:0 auto;border-radius:20rpx;font-size:40rpx;line-height:70rpx;margin-top:20rpx;margin-bottom:30rpx;">确定</view>
+      <ad  unit-id="adunit-d22692ced6d46d40"></ad>
+  </view>
+</template>
+

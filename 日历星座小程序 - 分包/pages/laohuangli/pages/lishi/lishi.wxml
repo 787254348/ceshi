@@ -1,0 +1,21 @@
+
+<button class="share" open-type="share">
+  <image class="sh" src="/i/share.png" />
+</button>
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<ad unit-id="adunit-85cb516e77d31945"></ad>
+<view class="box">
+    <view wx:for="{{lishi}}" wx:key="" wx:for-item="item">
+      <navigator class="content" url="/pages/laohuangli/pages/lishiDetail/lishiDetail?id={{item._id}}">
+        <view class="txt">
+          <text style="padding-right:1em">📺</text>{{item.des}}</view>
+        <text class="dy">{{dy}}</text>
+        <view class="time">{{item.year}}年{{item.month}}月{{item.day}}日</view>
+      </navigator>
+    </view>
+    <ad unit-id="adunit-85cb516e77d31945"></ad>
+  <button open-type="share" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="onshare" style="background-color:#00bab8;width:96%;height:70rpx;line-height:70rpx;margin-top:30rpx">分享到微信群</button>
+  <template is="footer" />
+</view>
+

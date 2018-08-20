@@ -1,0 +1,27 @@
+<view class="header">
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/calendar/calendar">
+      <button>首页</button>
+    </navigator>
+    <navigator style="width:36%;" class="template-1"  url="/pages/yule/pages/cs/cs">
+      <button style="background-color:red">命理测试</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/heka/heka">
+      <button >贺卡</button>
+    </navigator>
+    <navigator class="template-1" open-type="switchTab" url="/pages/tabBar/qingjian/qingjian">
+      <button >请柬</button>
+    </navigator>
+</view>
+
+<canvas canvas-id="shareCanvas" style="width:100%;height:450px" />
+<!--隐藏生成的图片-->
+<view style="position:reletive">
+    <canvas canvas-id="shareCanvas1" style="width:100%;height:450px;position:absolute;top:-500px;" />
+</view>
+  <view class="bt">
+    <button  open-type="share" style="width:56%">😁点我分享</button>
+    <button  bindtap="save"  style="width:38%"><image  src="/i/pyq.png" class="f-x" style="top:8rpx;" />生成图发圈</button>
+  </view>
+  <ad style="margin-top:20rpx" unit-id="adunit-bee94080e94ec9f5" ></ad>
+  <import src="../../../templet.wxml" />
+  <template is="footer" />

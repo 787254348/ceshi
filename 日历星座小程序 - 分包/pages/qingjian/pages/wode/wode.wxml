@@ -1,0 +1,28 @@
+<import src="../../../templet.wxml" />
+<template is="msgItem" />
+<view class="page-head">
+  <navigator open-type="switchTab" url="/pages/tabBar/qingjian/qingjian" style="float:left" >📝制作请柬</navigator>
+  <navigator url="/pages/pay/pages/pay/pay" style="float:right" >✅升级去广告</navigator>
+</view>
+<view class="page-title">💌我制作的请柬</view>
+<view class="content">
+  <view wx:for="{{information}}" wx:key="" >
+      <navigator  url="/pages/qingjian/pages/qjxq/qjxq?id={{item.itemid}}&templet={{item.templet}}&cate_id={{item.cate_id}}&yname={{item.yname}}&xname={{item.xname}}&bname={{item.bname}}&ytitle={{item.ytitle}}&tname={{item.tname}}&v={{vip}}" class="qingjian" >
+          <view  wx:if="{{item.cate_id==1}}" class="title">💝{{item.yname}}与{{item.xname}}的结婚请柬</view>
+          <view  wx:if="{{item.cate_id==2}}" class="title">💝{{item.bname}}的满月请柬</view>
+          <view  wx:if="{{item.cate_id==3}}" class="title">💝{{item.tname}}的乔迁请柬</view>
+          <view  wx:if="{{item.cate_id==4}}" class="title">💝{{item.tname}}的{{item.ytitle}}请柬</view>
+          <view  wx:if="{{item.cate_id==5}}" class="title">💝{{item.bname}}的升学请柬</view>
+          <view  wx:if="{{item.cate_id==6}}" class="title">💝{{item.bname}}的百日宴请柬</view>
+          <view  wx:if="{{item.cate_id==7}}" class="title">💝{{item.bname}}的生日请柬</view>
+          <view  wx:if="{{item.cate_id==8}}" class="title">💝{{item.bname}}的庆灯宴席</view>
+      </navigator>             
+  </view>
+</view>
+<navigator open-type="switchTab" url="/pages/tabBar/qingjian/qingjian" class="t" style="display:{{block}}">您还没有制作请柬，请点此选择模板制作～</navigator>
+<view wx:if="{{vip==0}}" >
+    <ad unit-id="adunit-dbaa0fab6ab84084"></ad>
+</view>
+
+
+

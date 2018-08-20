@@ -1,0 +1,24 @@
+<scroll-view  bindscroll="scroll" style="height: {{clientHeight}}px; width: {{windowWidth}}px;" scroll-y="true" >
+  <import src="../../../templet.wxml" />
+  <template is="msgItem" />
+  <view class="nav">
+      <view class="{{num==1 ? 'on' : 'in'}}" bindtap="charge" data-name="top" data-num="1">头条</view>
+      <view class="{{num==2 ? 'on' : 'in'}}" bindtap="charge" data-name="shehui" data-num="2">社会</view>
+      <view class="{{num==3 ? 'on' : 'in'}}" bindtap="charge" data-name="yule" data-num="3">娱乐</view>
+      <view class="{{num==4 ? 'on' : 'in'}}" bindtap="charge" data-name="caijing" data-num="4">财经</view>
+  </view>
+  <view wx:for="{{result}}" wx:key="">
+    <view wx:if="{{index%2==0}}" >
+      <ad style="margin-bottom:20rpx" unit-id="adunit-36daccbe4555fe0c" ></ad>
+    </view>
+    <navigator  class="content"   url="/pages/toutiao/pages/xq/xq?title={{item.title}}&img1={{item.thumbnail_pic_s}}&img2={{item.thumbnail_pic_s02}}&img3={{item.thumbnail_pic_s03}}&date={{item.date}}">
+        <image class="img {{arr[index]?'loaded':''}}"   src="{{arr[index]?item.thumbnail_pic_s:''}}" />
+        <view class="title">{{item.title}}</view>
+    </navigator>
+    
+  </view>
+  <button  open-type="share" >😁点我分享</button>
+  <ad unit-id="adunit-36daccbe4555fe0c" ></ad>
+  <template is="footer" />
+  <view class="shuoming">以上数据来源于聚合数据（juhe.cn）</view>
+</scroll-view>
