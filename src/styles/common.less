@@ -1,0 +1,71 @@
+each(range(50), {
+  .margin-left-@{value} {
+    margin-left: (@value * 1px);
+  }
+  .margin-right-@{value} {
+    margin-right: (@value * 1px);
+  }
+  .margin-top-@{value} {
+    margin-top: (@value * 1px);
+  }
+  .margin-bottom-@{value} {
+    margin-bottom: (@value * 1px);
+  }
+  .padding-left-@{value} {
+    padding-left: (@value * 1px);
+  }
+  .padding-right-@{value} {
+    padding-right: (@value * 1px);
+  }
+  .padding-top-@{value} {
+    padding-top: (@value * 1px);
+  }
+  .padding-bottom-@{value} {
+    padding-bottom: (@value * 1px);
+  }
+});
+each(range(40), {
+  .font-size-@{value} {
+    font-size: (@value * 1px) !important;
+  }
+});
+
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: var(--primary-color);
+}
+.pointer{
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-1{
+  flex:1;
+}
+.flex-end{
+  justify-content: flex-end;
+}
+.justify-center{
+  justify-content: center;
+}
+.space-between{
+  justify-content: space-between;
+}
+.space-around{
+  justify-content: space-around;
+}
+.text-color-secondary{
+  color:var(--text-color-secondary);
+}
+.text-center{
+  text-align: center;
+}
+.align-center{
+  align-items: center;
+}
+.cursor-move{
+  cursor: move;
+}
